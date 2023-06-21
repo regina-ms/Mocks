@@ -21,6 +21,8 @@ test('should return "Ваш текущий уровень: 99"', () => {
   expect(getLevel(46)).toBe('Ваш текущий уровень: 99');
 });
 
-/* test('mock was called', () => {
-  expect(() => { fetchData('https://server/user/45'); }).toThrow();
-}); */
+test('should throw error', () => {
+  expect(() => {
+    fetchData('https://server/user/45');
+  }).toThrow('Mock this!');
+});
