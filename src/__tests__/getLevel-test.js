@@ -24,5 +24,13 @@ test('should return "Ваш текущий уровень: 99"', () => {
 test('should throw error', () => {
   expect(() => {
     fetchData('https://server/user/45');
-  }).toThrow('Mock this!');
+  }).toThrow();
+});
+
+test('should throw error2', () => {
+  function checkError() {
+    fetchData('https://server/user/45');
+  }
+
+  expect(checkError).toThrow('Mock this!');
 });
